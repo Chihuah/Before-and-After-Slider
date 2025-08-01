@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Slider</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Before and After Slider</h1>
+        <nav id="location-nav">
+            <!-- 導覽列項目將由JavaScript動態生成 -->
+        </nav>
+    </header>
+
+    <main>
+        <div class="slider-container">
+            <div class="image-wrapper">
+                <img id="before-image" class="before-image" src="" alt="Before Image">
+                <img id="after-image" class="after-image" src="" alt="After Image">
+                <div class="slider-overlay">
+                    <input type="range" id="comparison-slider" min="0" max="100" value="50" class="slider">
+                    <div class="slider-button"></div>
+                </div>
+            </div>
+            <div class="image-labels">
+                <span class="label-before">Before</span>
+                <span class="label-after">After</span>
+            </div>
+        </div>
+
+        <div id="error-message" class="error-message" style="display: none;">
+            <p>載入圖片時發生錯誤，請檢查圖片檔案是否存在。</p>
+        </div>
+
+        <div id="no-images-message" class="no-images-message" style="display: none;">
+            <p>找不到可用的圖片組。請確保images資料夾中有符合命名規則的圖片檔案（地點-1.jpg 和 地點-2.jpg）。</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>使用方式：拖動滑桿來比較前後照片，點擊上方導覽列切換不同地點。</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
+
